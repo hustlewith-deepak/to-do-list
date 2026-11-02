@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Master - To-Do App</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <div class="logo">✓</div>
+            <h1>Task Master</h1>
+            <p>Stay organized, focused, and productive.</p>
+        </header>
+
+        <!-- Add Task -->
+        <section class="input-section">
+            <form id="task-form">
+                <input
+                    type="text"
+                    id="task-input"
+                    placeholder="What needs to be done?"
+                    maxlength="200"
+                    autocomplete="off"
+                >
+                <button type="submit" class="add-btn">
+                    + Add Task
+                </button>
+            </form>
+        </section>
+
+        <!-- Task Card -->
+        <section class="task-card">
+
+            <!-- Filters -->
+            <div class="toolbar">
+
+                <div class="filters">
+                    <button class="filter-btn active"
+                        data-filter="all">All</button>
+
+                    <button class="filter-btn"
+                        data-filter="active">Active</button>
+
+                    <button class="filter-btn"
+                        data-filter="completed">Completed</button>
+                </div>
+
+                <button id="clear-completed" class="clear-btn">
+                    Clear Completed
+                </button>
+
+            </div>
+
+            <!-- Task List -->
+            <ul id="task-list"></ul>
+
+            <!-- Empty Message -->
+            <div id="empty-state" class="empty-state">
+                <div class="empty-icon">📝</div>
+                <h3>No tasks yet!</h3>
+                <p>Add a new task to get started.</p>
+            </div>
+
+            <!-- Counter -->
+            <div class="footer-bar">
+                <span id="task-counter">0 tasks left</span>
+                <span id="total-counter">0 total tasks</span>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Stay organized, stay productive. ✨</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
